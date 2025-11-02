@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Já sou Aluno</title>
+
+ <style>
+
+
+            body{background-color: rgb(0, 55, 183); 
+                background: linear-gradient(to right, #112cc5, #c74107);
+            display: flex;
+            justify-content: center;
+            align-items: start;
+    height: 100vh;              
+        margin: 0px;} 
+        
+    form { background-color: white;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow:  100px rgba(0, 0, 0, 0.2);
+            width: 353px;}
+
+              
+
+
+button{background-color: rgb(29, 36, 234);
+    color: rgba(255, 255, 255, 0.789);
+    border-radius: 10px;
+    padding: 10px 30% ;}
+
+   
+    button:hover{background-color: rgb(0, 50, 164);
+    background: radial-gradient(#112cc5, #081a80);}
+
+
+    h2 {text-align: center;
+    color: rgb(5, 89, 149);}
+
+.Senai{ display: flex;
+    justify-content: center;
+align-items: center;}
+
+.Endereço{display: flex;
+  gap: 10px;}
+
+.CBU{display: flex;
+  gap: 10px;}
+
+
+</style>
+</head>
+
+
+
+    <body>
+
+        <!-- div class pois o body estava afetando a imagem, tive que deixar em um conteriner para "separar"-->
+        <div class="conteiner">
+            <div class="Senai">
+            <img src="SENAI2.png" alt="SENAI" tittle="SENAI" width="310"> </div>
+
+        <form action="inscriçao.html" method="post">
+
+            <h2>Complemento de Dados</h2>
+
+
+
+
+
+            <!-- Dados pessoais do formulário-->
+<fieldset>
+    <legend> Dados Pessoais</legend>
+            <label for="Nome">Nome Completo:</label> <br>
+    <input id="Nome" type="text" required placeholder="Digite aqui"> <br>
+
+
+    <label for="DATA">Data de Nascimento:</label><br>
+    <input id="DATA" type="date"required> <br>
+
+    <label for="CPF">CPF:</label> <br>
+     <input id="CPF" type="number" required> <br>
+
+    <label for="RG">RG:</label> <br>
+ <input id="RG" type="number" required> <br> 
+
+ <label for="genero">Gênero:</label><br>
+    <input type="radio" id="masculino" name="genero" required>
+    <label for="masculino"> masculino </label>
+     <input type="radio" id="feminino" name="genero">
+     <label for="feminino"> Feminino </label>
+      <input type="radio" id="outro" name="genero" required> 
+      <label for="outro"> Outro </label> <br> <br>
+
+
+    <label for="Estado civil"> Estado Civil</label> <br>
+    <select>
+    <option value="" selected disabled>Selecione uma Opção</option>
+    <option value="Solteiro"> Solteiro </option>
+    <option value="Casado">Casado</option>
+    <option value="Viúvo(a)">Viúvo(a)</option>
+    <option value="Divorciado">Divorciado</option> </select> <br> <br>
+
+<label for="nacionalidade"> Nacionalidade</label> <br>
+    <select>
+    <option value="" selected disabled>Selecione uma Opção</option>
+    <option value="brasileira"> Brasileira </option>
+    <option value="estrangeira">Estrangeira</option> 
+</select> <br> 
+
+<label for="Naturalidade"> Naturalidade: </label> <br>
+<select>
+    <option value="" selected disabled>Selecione uma Opção</option>
+    <option value="brasileira"> Brasileira </option>
+    <option value="estrangeira">Estrangeira</option> 
+</select> <br> <br> 
+</fieldset>    <br>
+
+
+
+
+
+<!-- ENDEREÇO do formulário-->
+  <fieldset>
+<legend>Endereço Completo</legend>
+
+<label for="Rua"> Nome da Rua</label> <br>
+<div class="Endereço">
+<input type="text" name="Rua" id="Rua" placeholder="Nome da Rua">
+<input type="number" name="Numero" id="numero" placeholder="Nº" > </div> <br>
+
+
+
+<label for="Complemento"> Complemento: </label>
+<input type="text" name="Complemento" id="Complemento" placeholder="Apartamento, bloco, casa"> <br> <br>
+
+<!--DIV CLASS= CBU:cidade, baiiro, Unidade Federal-->
+<label for="cidade"> Cidade: </label>
+<div class="CBU">
+<input type="text" id="cidade" name="cidade">
+<select>
+    <option value="" selected disabled>UF</option>
+    <option value="Pernambuco"> Pernambuco(PE) </option>
+    <option value="Bahia">Bahia(BA)</option>
+    <option value="Ceara"> Ceará(CE) </option>
+    <option value="paraiba">Paraíba(PB)</option>
+    <option value="rio grande do norte">Rio Grande do Norte(RN) </option>
+    <option value="alagoas">Alagoas(AL)</option>
+    <option value="sergipe"> Sergipe(SE) </option>
+    <option value="piaui">Piuaí(PI)</option>
+    <option value="maranhao"> Maranhão(MA) </option>
+    <option value="distrito">Distrito Federal(DF)</option> 
+    </select>
+</div> <br>
+
+    <label for="CEP"> CEP</label>
+    <input type="number" id="CEP" name="CEP">
+  </fieldset>     <br>
+
+
+
+
+<!-- CONTATO do formulário-->
+
+  <fieldset>
+    <legend>Contato</legend>
+<label for="celular"> Telefone Celular</label>
+<input type="number" id="celular" name="celular"> <br>
+
+<label for="whatsapp"> WhatsApp</label>
+<input type="number" id="whatsapp" name="whatsapp" placeholder="(DDD) 9"> <br> <br>
+
+<label for="Email"> Email</label> <br> 
+<input type="email" id="Email" name="email"> <br> <br>
+
+<label for="linkedin"> Linkedin</label> <br>
+<input type="text" id="linkedin" name="linkedin">
+ </fieldset> <br> <br>
+
+
+
+
+<!-- INformações opcionais do formulário-->
+<fieldset>
+    <legend>Informações Opcionais</legend>
+<label for="CNH"> Possui CNH?</label> <br> 
+
+<label for="tem cnh">Sim</label>
+<input type="radio" id="tem cnh" name="cnh">
+<label for="ntem cnh">Não </label>
+<input type="radio" id="ntem cnh" name="cnh"> <br> <br>
+
+<label for="categoria">Qual é a categoria?</label>
+
+<div class="CNH">
+<input type="checkbox"> A
+<input type="checkbox"> B
+<input type="checkbox"> C
+<input type="checkbox"> D
+<input type="checkbox"> E</div> <br> <br>
+
+<label for="tipo de sangue">Tipo Sanguíneo</label>
+<select name="sangue" id="sangue">
+    <option value="" disabled selected>Selecione seu tipo sanguíneo
+<option value="A-">A</option>
+<option value="B-">B</option>
+<option value="AB-">AB</option>
+<option value="O">O</option> </select> <br>
+
+
+<select name="-ou+" id="-ou+">
+<option value="" disabled selected> Selecione o fator RH
+    <option value="negativo"> Negativo</option>
+    <option value="positivo"> Positivo</option>
+</select> 
+</fieldset> <br>
+
+
+
+<!--buttons do formulario.-->
+ <div style="text-align: center;">   
+        <button type="submit"> Enviar</button> <div> <br>
+
+            <button type="reset"> Limpar Tudo!</button> <br> <br>
+
+            <a href="index.html"> Voltar para o Início</a>
+
+</div>
+</form>
+
+
+    </body>
+    </html>
